@@ -11,10 +11,12 @@ class Module
 		Module(std::string nm, int pnt);
 		virtual ~Module();
 		
-		void changeEC();
-		void assignDocent(Docent*);
-		void assignStudent(Student*);
+		void changeEC(int nieuw);
+		void assignDocent(Docent* d);
+		void assignStudent(Student* s);
 		void removeStudent(std::string naam);
+		void removeDocent(std::string naam);
+		void list();
 
 	private:
 		std::string naam;

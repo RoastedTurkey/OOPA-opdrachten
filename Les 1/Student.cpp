@@ -3,6 +3,7 @@
 
 
 Student::Student()
+	: Persoon()
 {
 }
 
@@ -22,4 +23,5 @@ int Student::getEC()
 
 void Student::updateEC(int p)
 {
+	ec += p;
 }
