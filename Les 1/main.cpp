@@ -92,5 +92,18 @@ int main()
 
 	std::cin >> ch;
 
+	for (int i = 0; i < modules.size(); i++)
+	{
+		delete modules[i];
+	}
+	for (int i = 0; i < alleDocenten.size(); i++)
+	{
+		delete alleDocenten[i];
+	}
+	for (int i = 0; i < alleStudenten.size(); i++)
+	{
+		delete alleStudenten[i];
+	}
+
 	return 0;
 }
