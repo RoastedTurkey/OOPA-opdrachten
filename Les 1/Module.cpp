@@ -32,12 +32,15 @@ Module::~Module()
 void Module::changeEC(int nieuw)
 {
 	std::vector<Student*>::iterator it = studenten.begin();
+	int delta = nieuw - ec;
 
 	while (it != studenten.end())
 	{
-		(*it)->updateEC(nieuw - ec);
+		(*it)->updateEC(delta);
+		it++;
 	}	
-	std::cout << "EC changed from: " << ec << "to" << nieuw << std::endl;
+	std::cout << "EC value of " << naam << " changed from: " 
+		<< ec << " to " << nieuw << std::endl;
 	std::cout << "---- updated student totals" << std::endl;
 	ec = nieuw;
 }
@@ -62,8 +65,8 @@ void Module::removeStudent(std::string naam)
 		if ((*it)->getName() == naam)
 		{
 			(*it)->updateEC(ec * -1);
-			std::cout << "Managed to get away from " << naam << ": "
-				<< (*it)->getName() << std::endl;
+			std::cout << "Managed to get away from " << this->naam << ": "
+				<< naam << std::endl;
 			delete *it;
 			it = studenten.erase(it);
 		}
@@ -82,7 +85,7 @@ void Module::removeDocent(std::string naam)
 	{
 		if ((*it)->getName() == naam)
 		{
-			std::cout << "Is getting to old for this shit: " << (*it)->getName() << std::endl;
+			std::cout << "Is getting to old for this shit: " << naam << std::endl;
 			delete *it;
 			it = docenten.erase(it);
 		}

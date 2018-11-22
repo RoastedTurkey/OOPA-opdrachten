@@ -61,18 +61,18 @@ int main()
 		modules[i]->list();
 	}
 
+	std::cout << "---- All Students and their ECs:" << std::endl;
 	for (int i = 0; i < alleStudenten.size(); i++)
 	{
-		std::cout << "---- Studenten:" << std::endl;
 		std::cout << alleStudenten[i]->getName() << ": " 
 			<< alleStudenten[i]->getEC() << std::endl;
 	}
 
-	modules[3]->changeEC(4);
+	modules[2]->changeEC(4);
 
+	std::cout << "---- All Students and their ECs:" << std::endl;
 	for (int i = 0; i < alleStudenten.size(); i++)
 	{
-		std::cout << "---- Studenten:" << std::endl;
 		std::cout << alleStudenten[i]->getName() << ": "
 			<< alleStudenten[i]->getEC() << std::endl;
 	}
@@ -80,9 +80,9 @@ int main()
 	modules[2]->removeStudent("Alfred");
 	modules[2]->list();
 
+	std::cout << "---- All Students and their ECs:" << std::endl;
 	for (int i = 0; i < alleStudenten.size(); i++)
 	{
-		std::cout << "---- Studenten:" << std::endl;
 		std::cout << alleStudenten[i]->getName() << ": "
 			<< alleStudenten[i]->getEC() << std::endl;
 	}
