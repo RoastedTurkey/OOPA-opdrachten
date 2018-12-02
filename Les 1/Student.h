@@ -12,6 +12,6 @@ class Student :
 		void updateEC(int p);
 
 	private:
-		int ec;
+		int ec = 0;
 };
 

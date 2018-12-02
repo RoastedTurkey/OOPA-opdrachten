@@ -3,6 +3,7 @@
 
 
 Docent::Docent()
+	: Persoon()
 {
 }
 
